@@ -1,3 +1,1 @@
-# Szkolna-Biblioteka-Cyfrowa
-
 readme
