@@ -1,0 +1,13 @@
+select:hover {
+	background-color: #0bda51;
+}
+
+input:hover {
+	background-color: #0bda51;
+}
+
+table,tr,td {
+	border-style: dotted;
+	border-color: rgb(25, 0, 255);
+	border-width: 5px;
+}

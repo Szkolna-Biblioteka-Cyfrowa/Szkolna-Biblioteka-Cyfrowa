@@ -1,0 +1,71 @@
+@media (min-device-width: 768px) {
+
+    #wyszukiwarka[type=text],
+    #szukaj[type=submit] {
+        font-size: 20px;
+    }
+
+    #wyszukiwarka[type=text]    {
+        width: 53vw;
+        max-width: 800px;
+    }
+}
+
+@media (max-device-width: 768px) {
+
+    #wyszukiwarka[type=text],
+    #szukaj[type=submit] {
+        font-size: 48px;
+    }
+
+    #wyszukiwarka[type=text]    {
+        width: 800px;
+    }
+}
+
+#wyszukiwarka[type=text] {
+    border-radius: 10px 0 0 10px;
+    border-color: black;
+    padding-left: 20px;
+    height: 2em;
+    background-color: rgb(241, 241, 241);
+    transition: background-color 0.2s;
+    float: left;
+}
+
+#szukaj[type=submit] {
+    border-radius: 0 10px 10px 0;
+    border-color: black;
+    padding-right: 10px;
+    height: 2em;
+    background-color: rgb(163, 158, 138);
+    border-left-width: 0px;
+}
+
+#wyszukiwarka[type=text]:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+#wyszukiwarka[type=text]:placeholder-shown {
+    background-color: rgb(214, 208, 184);
+}
+
+#wyszukiwarka[type=text]:focus {
+    background-color: rgb(241, 241, 241);
+}
+
+#wyszukiwarka[type=text]::placeholder {
+    transition: color 0.2s;
+}
+
+#wyszukiwarka[type=text]:focus::placeholder {
+    color: rgb(241, 241, 241);
+}
+
+#szukaj[type=submit]:hover {
+    background-color: rgb(138, 134, 117);
+}
+
+#szukaj[type=submit]:active {
+    background-color: rgb(102, 99, 86);
+}

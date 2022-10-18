@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     </meta>
-    <title>Szkolna Biblioteka Cyfrowa - strona główna</title>
+    <title>Strona Główna | Szkolna Biblioteka Cyfrowa</title>
+
+    <meta name="last-updated" content="2022-10-18, 19:04 CET">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -13,7 +15,115 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
+    <meta name="title" content="Szkolna Biblioteka Cyfrowa">
+    <meta name="description"
+        content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
+                 Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Szkolna Biblioteka Cyfrowa">
+    <meta property="og:description"
+        content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
+                 Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
+    <meta property="og:image"
+        content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Szkolna Biblioteka Cyfrowa">
+    <meta property="twitter:description"
+        content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
+                 Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
+    <meta property="twitter:image"
+        content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+    <link rel="stylesheet" href="./szukaj.css">
     <style>
+        @media (min-device-width: 768px) {
+            #przycisk {
+                width: 200px;
+                border-radius: 10px;
+            }
+
+            #gora {
+                padding-top: 10px;
+            }
+
+            img {
+                max-width: 699px;
+                width: 90%;
+            }
+        }
+
+        #przycisk {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            background-color: #8b1d1d;
+            color: aliceblue;
+            height: 2em;
+            padding-top: 0.5em;
+            border-style: groove;
+            border-color: black;
+            margin-top: 100px;
+
+        }
+
+        @media (max-device-width: 768px) {
+            img {
+                width: 90%;
+            }
+
+            body {
+                font-size: 48px;
+            }
+
+            #przycisk {
+                width: 500px;
+                border-radius: 30px;
+                border-width: 10px;
+            }
+
+            #gora {
+                padding-top: 50px;
+            }
+        }
+
+        #przycisk:hover {
+            background-color: rgb(219, 41, 41);
+            color: rgb(186, 193, 199);
+        }
+
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #szukaj_blok {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: url('./img/school-classroom.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
         #logo {
             display: flex;
             margin: auto;
@@ -27,14 +137,41 @@
             margin: auto;
             justify-content: center;
         }
+
+        #gora {
+            background-image: url('./img/tlo.png');
+            background-repeat: repeat;
+            background-size: 100px;
+            border-radius: 10px;
+        }
+
+        img {
+            mix-blend-mode: multiply;
+            filter: contrast(1);
+        }
     </style>
+
+    <script>
+        function formularz() {
+            window.location.href = './formularz.html';
+        }
+    </script>
 </head>
 
 <body>
-    <marquee>Strona w przebudowie!</marquee>
-    <div id="logo"><img src="./img/sbc_logo.png" /></div>
+    <div id="gora">
+        <div id="logo"><img src="./img/sbc_logo.png" id="logoId" /></div>
+        <div id="szukaj_blok">
+            <form action="" enctype="text/plain" method="get">
+                <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input type="submit"
+                    id="szukaj" value="🔍">
+            </form>
+        </div>
+    </div>
     <hr />
-    <div id="zdjecie"><img src="./img/boy-reading-a-book.jpg" /></div>
+    <div id="przycisk" onclick="formularz()">
+        Formularz testowy
+    </div>
 </body>
 
 </html>
