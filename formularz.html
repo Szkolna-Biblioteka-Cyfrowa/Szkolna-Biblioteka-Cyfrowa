@@ -121,16 +121,22 @@
             filter: contrast(1);
         }
     </style>
+
+    <script>
+        function logo() {
+            window.location.href = './index.html';
+        }
+    </script>
 </head>
 
 <body>
     <div id="gora">
-        <div id="logo"><img src="./img/sbc_logo.png" /></div>
+        <div id="logo"><img src="./img/sbc_logo.png" class="logo" onclick="logo()" /></div>
     </div>
     <hr />
 
     <div id="form">
-        <form action="formularz_submit" method="POST">
+        <form action="./formularz_submit.php" method="POST">
             <div>
                 Imię: <input type="text" name="imie">
 

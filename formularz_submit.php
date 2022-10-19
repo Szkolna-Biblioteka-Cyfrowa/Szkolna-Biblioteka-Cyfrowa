@@ -10,7 +10,7 @@ $Plec=$_POST['plec'];
 $R_buta=$_POST['rozmiar_buta'];
 $Waga=$_POST['waga'];
 
-$con = new mysqli("localhost","id********_root","**************","id********_baza");
+$con = new mysqli("localhost","root","","id19715355_baza");
 echo $Imie;
  
 $q="INSERT INTO osoba (Imie, Plec, R_buta, Waga) VALUES ('".$Imie."' , '".$Plec."', '".$R_buta."', '".$Waga."'); ";
@@ -26,6 +26,8 @@ while($row=$wynik2->fetch_array()){
 	echo "<td>" .$row[3]. "</td>";
 	echo "<td>" .$row[4]. "</td>";
 	echo "</tr>";
+	
+	
 }
 
 }

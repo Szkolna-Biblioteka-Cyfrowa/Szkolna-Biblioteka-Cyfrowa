@@ -1,0 +1,103 @@
+@media (min-device-width: 768px) {
+    #przycisk {
+        width: 200px;
+        border-radius: 10px;
+    }
+
+    #gora {
+        padding-top: 10px;
+    }
+
+    img.logo {
+        max-width: 699px;
+        width: 90%;
+    }
+}
+
+#przycisk {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: #8b1d1d;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
+    color: aliceblue;
+    height: 2em;
+    padding-top: 0.5em;
+    border-style: groove;
+    border-color: black;
+    margin-top: 100px;
+
+}
+
+@media (max-device-width: 768px) {
+    img.logo {
+        width: 90%;
+    }
+
+    body {
+        font-size: 48px;
+    }
+
+    #przycisk {
+        width: 500px;
+        border-radius: 30px;
+        border-width: 10px;
+    }
+
+    #gora {
+        padding-top: 50px;
+    }
+}
+
+#przycisk:hover {
+    background-color: rgb(219, 41, 41);
+    color: rgb(186, 193, 199);
+}
+
+#szukaj_blok {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('./img/school-classroom.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+#zdjecie {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#gora {
+    background-image: url('./img/tlo.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    border-radius: 10px;
+}
+
+img.logo {
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+}
