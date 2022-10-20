@@ -45,7 +45,7 @@
 		}
 
 		.autor	{
-			font-size:16px;
+			font-size:14px;
 			font-style: italic;
 			color: rgb(210, 210, 210);
 		}
@@ -66,7 +66,7 @@
 
 		.tytul	{
 			font-weight: bold;
-			font-size: 47px;
+			font-size: 45px;
 		}
 
 		.autor	{
@@ -100,6 +100,11 @@
 			border-radius: 10px;
 			padding: 10px 10px 10px 10px;
 		}
+
+		hr:last-child	{
+			margin-bottom: 0px;
+			border: 0px;
+		}
 	</style>
 
 	<script>
@@ -110,6 +115,7 @@
 </head>
 
 <body style="color:white;">
+	<div id="zawartosc">
     <div id="gora">
         <div id="logo"><img src="./img/sbc_logo.png" id="logoId" class="logo" onclick="logo()"/></div>
         <div id="szukaj_blok">
@@ -128,7 +134,7 @@
 
 	$GG="SELECT * FROM ksiazki WHERE Tytul LIKE '%" . $s . "%' OR Autor LIKE '%" . $s . "%'";
 	if($wynik2=$con->query($GG)){
-		echo "<hr /><div id='tlo'><hr />";
+		echo "<hr /><div id='tlo'>";
 
 	while($row=$wynik2->fetch_array()){
 		echo "
@@ -157,7 +163,24 @@
 		echo "<meta property='og:description' content='Wyniki wyszukania dla: " . $s . "'>";
 		echo "<meta property='twitter:description' content='Wyniki wyszukania dla: " . $s . "'>";
 	?>
+	</div>
+	<div id="footer">
+        <div>
+            <div>
+                <a href="https://github.com/Szkolna-Biblioteka-Cyfrowa">
+                    <img src="./img/github.png" class="footer_zdjecie" />
+            </div>
+            <div></a></div>
+            </a>
+        </div>
+        <span id="footer_tekst">Ⓒ SZKOLNA BIBLIOTEKA CYFROWA</span>
+        <a href="./index.html"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
+    </div>
 
+    <script>
+        if (window.screen.width < 768)
+            document.getElementById('footer_tekst').innerHTML = 'Ⓒ SBC';
+    </script>
 </body>
 
 </html>

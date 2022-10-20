@@ -16,27 +16,22 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta name="title" content="Szkolna Biblioteka Cyfrowa">
-    <meta name="description"
-        content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
+    <meta name="description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
                  Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://metatags.io/">
     <meta property="og:title" content="Szkolna Biblioteka Cyfrowa">
-    <meta property="og:description"
-        content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
+    <meta property="og:description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
                  Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
-    <meta property="og:image"
-        content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+    <meta property="og:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://metatags.io/">
     <meta property="twitter:title" content="Szkolna Biblioteka Cyfrowa">
-    <meta property="twitter:description"
-        content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
+    <meta property="twitter:description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
                  Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
-    <meta property="twitter:image"
-        content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+    <meta property="twitter:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
 
     <link rel="stylesheet" href="./szukaj.css">
     <link rel="stylesheet" href="stronaglowna.css">
@@ -46,26 +41,45 @@
             window.location.href = './formularz.html';
         }
 
-        function logo()	{
-			window.location.href = './index.html';
-		}
+        function logo() {
+            window.location.href = './index.html';
+        }
     </script>
 </head>
 
 <body>
-    <div id="gora">
-        <div id="logo"><img src="./img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
-        <div id="szukaj_blok">
-            <form action="szukaj.php" enctype="text/plain" method="get">
-                <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input type="submit"
-                    id="szukaj" value="🔍">
-            </form>
+    <div id="zawartosc">
+        <div id="gora">
+            <div id="logo"><img src="./img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
+            <div id="szukaj_blok">
+                <form action="szukaj.php" enctype="text/plain" method="get">
+                    <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input
+                        type="submit" id="szukaj" value="🔍">
+                </form>
+            </div>
+        </div>
+        <hr />
+        <div id="przycisk" onclick="formularz()">
+            Formularz testowy
         </div>
     </div>
-    <hr />
-    <div id="przycisk" onclick="formularz()">
-        Formularz testowy
+    <div id="footer">
+        <div>
+            <div>
+                <a href="https://github.com/Szkolna-Biblioteka-Cyfrowa">
+                    <img src="./img/github.png" class="footer_zdjecie" />
+            </div>
+            <div></a></div>
+            </a>
+        </div>
+        <span id="footer_tekst">Ⓒ SZKOLNA BIBLIOTEKA CYFROWA</span>
+        <a href="./index.html"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
     </div>
+
+    <script>
+        if (window.screen.width < 768)
+            document.getElementById('footer_tekst').innerHTML = 'Ⓒ SBC';
+    </script>
 </body>
 
 </html>
