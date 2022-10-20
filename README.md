@@ -7,7 +7,6 @@ SBC umożliwia:
  - wypożyczanie książek
  - wyszukiwanie książek
  - zarządzanie wypożyczonymi książkami
- - administrowanie użytkownikami...
  - ... i wiele więcej!
 
 ![Urządzenia ze stroną internetową SBC](https://imgur.com/JjGUrWH.png)
