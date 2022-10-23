@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="Stylesheet" type="text/css" href="style.css"/>
+<script src="./removeBanner.js"></script>
 </head>
 
 

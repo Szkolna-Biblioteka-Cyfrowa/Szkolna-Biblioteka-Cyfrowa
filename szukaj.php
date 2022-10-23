@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8"></meta>
 
-    <meta name="last-updated" content="2022-10-19, 23:51 CET">
+    <meta name="last-updated" content="2022-10-20, 18:09 CET">
+    <meta name="viewport" content="user-scalable=no">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -107,9 +108,10 @@
 		}
 	</style>
 
+    <script src="./removeBanner.js"></script>
 	<script>
 		function logo()	{
-			window.location.href = './index.html';
+			window.location.href = '/';
 		}
 	</script>
 </head>
@@ -117,7 +119,7 @@
 <body style="color:white;">
 	<div id="zawartosc">
     <div id="gora">
-        <div id="logo"><img src="./img/sbc_logo.png" id="logoId" class="logo" onclick="logo()"/></div>
+        <div id="logo"><a href="/"><img src="./img/sbc_logo.png" id="logoId" class="logo" /></a></div>
         <div id="szukaj_blok">
             <form action="szukaj.php" enctype="text/plain" method="get">
                 <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input type="submit"
@@ -130,7 +132,7 @@
 	$s = $_GET['s'];
 	$w = 0;
 
-	$con = new mysqli("localhost","root","","id19715355_baza");
+	$con = new mysqli("localhost","root","","id19715355_baza")
 
 	$GG="SELECT * FROM ksiazki WHERE Tytul LIKE '%" . $s . "%' OR Autor LIKE '%" . $s . "%'";
 	if($wynik2=$con->query($GG)){
@@ -174,7 +176,7 @@
             </a>
         </div>
         <span id="footer_tekst">Ⓒ SZKOLNA BIBLIOTEKA CYFROWA</span>
-        <a href="./index.html"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
+        <a href="/"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
     </div>
 
     <script>

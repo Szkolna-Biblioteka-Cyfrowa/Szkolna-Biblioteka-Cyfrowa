@@ -5,7 +5,8 @@
     </meta>
     <title>Strona Główna | Szkolna Biblioteka Cyfrowa</title>
 
-    <meta name="last-updated" content="2022-10-19, 23:51 CET">
+    <meta name="last-updated" content="2022-10-20, 22:11 CET">
+    <meta name="viewport" content="user-scalable=no">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -16,33 +17,31 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta name="title" content="Szkolna Biblioteka Cyfrowa">
-    <meta name="description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
-                 Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
+    <meta name="description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych. Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://metatags.io/">
     <meta property="og:title" content="Szkolna Biblioteka Cyfrowa">
-    <meta property="og:description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
-                 Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
+    <meta property="og:description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych. Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
     <meta property="og:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://metatags.io/">
     <meta property="twitter:title" content="Szkolna Biblioteka Cyfrowa">
-    <meta property="twitter:description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych.
-                 Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
+    <meta property="twitter:description" content="Szkolna Biblioteka Cyfrowa to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych. Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem!">
     <meta property="twitter:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
 
     <link rel="stylesheet" href="./szukaj.css">
     <link rel="stylesheet" href="stronaglowna.css">
 
+    <script src="./removeBanner.js"></script>
     <script>
         function formularz() {
             window.location.href = './formularz.html';
         }
 
         function logo() {
-            window.location.href = './index.html';
+            window.location.href = '/';
         }
     </script>
 </head>
@@ -50,7 +49,7 @@
 <body>
     <div id="zawartosc">
         <div id="gora">
-            <div id="logo"><img src="./img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
+            <div id="logo"><a href="/"><img src="./img/sbc_logo.png" id="logoId" class="logo" /></a></div>
             <div id="szukaj_blok">
                 <form action="szukaj.php" enctype="text/plain" method="get">
                     <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input
@@ -73,11 +72,11 @@
             </a>
         </div>
         <span id="footer_tekst">Ⓒ SZKOLNA BIBLIOTEKA CYFROWA</span>
-        <a href="./index.html"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
+        <a href="/"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
     </div>
 
     <script>
-        if (window.screen.width < 768)
+                if (window.screen.width < 768)
             document.getElementById('footer_tekst').innerHTML = 'Ⓒ SBC';
     </script>
 </body>

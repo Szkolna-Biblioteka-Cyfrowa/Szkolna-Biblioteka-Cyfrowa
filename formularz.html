@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8">
     </meta>
+    
+    <meta name="last-updated" content="2022-10-20, 18:09 CET">
+    <meta name="viewport" content="user-scalable=no">
+    
     <link rel="stylesheet" href="./style.css">
-
     <link rel="stylesheet" href="./szukaj.css">
     <link rel="stylesheet" href="stronaglowna.css">
 
@@ -74,9 +77,10 @@
         }
     </style>
 
+    <script src="./removeBanner.js"></script>
     <script>
         function logo() {
-            window.location.href = './index.html';
+            window.location.href = '/';
         }
     </script>
 </head>
@@ -84,7 +88,7 @@
 <body>
     <div id="zawartosc">
         <div id="gora">
-            <div id="logo"><img src="./img/sbc_logo.png" class="logo" onclick="logo()" /></div>
+            <div id="logo"><a href="/"><img src="./img/sbc_logo.png" id="logoId" class="logo" /></a></div>
         </div>
         <hr />
 
@@ -135,7 +139,7 @@
             </a>
         </div>
         <span id="footer_tekst">Ⓒ SZKOLNA BIBLIOTEKA CYFROWA</span>
-        <a href="./index.html"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
+        <a href="/"><img src="./img/sbc_slogo.png" class="footer_zdjecie" /></a>
     </div>
 
     <script>
