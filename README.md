@@ -2,7 +2,7 @@
 -
 **Szkolna Biblioteka Cyfrowa** to projekt, mający usprawnić działanie biblioteki szkolnej przy wykorzystaniu baz danych. Pozwala użytkownikowi wypożyczyć książkę jednym kliknięciem! Administratorom strona umożliwia zarządzanie rekordami w bazie danych w przypadku, gdyby użytkownik chciałby usunąć bądź zmodyfikować swoje zamówienia.
 
-SBC umożliwia:
+Szkolna Biblioteka Cyfrowa umożliwia:
 
  - wypożyczanie książek
  - wyszukiwanie książek
