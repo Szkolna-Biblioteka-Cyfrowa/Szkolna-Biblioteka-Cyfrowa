@@ -217,7 +217,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
                 <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w wypożyczeniach..."><input type="submit"
                     id="szukaj" value="🔍">
                 <input type="hidden" name="nazwa_uzy" value="admin">
-                <input type="hidden" name="haslo" value="zaq1@WSX">
+                <input type="hidden" name="haslo" value="">
             </form>
         </div>
     </div>
