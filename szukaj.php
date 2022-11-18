@@ -137,7 +137,7 @@
 	$s = $_GET['s'];
 	$w = 0;
 
-	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
+	$con = new mysqli("localhost","root","","baza");
 
 	$GG="SELECT * FROM ksiazki WHERE Tytul LIKE '%" . $s . "%' OR Autor LIKE '%" . $s . "%'";
 	if($wynik2=$con->query($GG)){
