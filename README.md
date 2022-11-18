@@ -16,7 +16,7 @@ Szkolna Biblioteka Cyfrowa umożliwia:
 Autorzy strony:
 
  - Marcin Kusaj (MARKUSA19)
- - Dominik Dąbrowski (DeDe2004)
+ - Dominik Dąbrowski (D3De200)
  - Piotr Kacprzycki (Pietrox123)
 
 W razie pytań, jesteśmy w stanie udzielić odpowiedzi pod podanym adresem e-mail: webhost@szkolnabibliotekacyfrowa.pl
