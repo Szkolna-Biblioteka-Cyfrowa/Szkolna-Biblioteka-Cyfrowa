@@ -1,0 +1,247 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    </meta>
+    <title>Kontakt i pomoc | Szkolna Biblioteka Cyfrowa</title>
+
+    <meta name="viewport" content="user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="title" content="Szkolna Biblioteka Cyfrowa">
+    <meta name="description" content="Kontakt i pomoc | Szkolna Biblioteka Cyfrowa">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Szkolna Biblioteka Cyfrowa">
+    <meta property="og:description" content="Kontakt i pomoc | Szkolna Biblioteka Cyfrowa">
+    <meta property="og:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Szkolna Biblioteka Cyfrowa">
+    <meta property="twitter:description" content="Kontakt i pomoc | Szkolna Biblioteka Cyfrowa">
+    <meta property="twitter:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+    <link rel="stylesheet" href="/css/szukaj.css">
+    <link rel="stylesheet" href="/css/stronaglowna.css">
+
+    <script src="/js/blurowanie.js"></script>
+    <script>
+        function logo() {
+            window.location.href = '/';
+        }
+    </script>
+
+    <style>
+        #tlo {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px 0 0 0;
+        }
+
+        @media (min-device-width: 768px) {
+            body {
+                font-size: 20pt;
+            }
+
+            #gora {
+                padding-bottom: 10px;
+            }
+
+            #faq_tytul {
+                color: black;
+                width: 100%;
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .pytanie {
+                color: black;
+                font-size: 30px;
+            }
+
+            #kontakt_tytul {
+                color: black;
+                width: 100%;
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .odpowiedz {
+                color: black;
+                margin: 5px 0 35px 35px;
+            }
+            
+            textarea {
+                width: 80%;
+                height: 200px;
+            }
+            
+            #teksty {
+                padding: 50px;
+            }
+        }
+
+        @media (max-device-width: 767px) {
+            body {
+                font-size: 42pt;
+            }
+
+            #przyciski {
+                display: block;
+                width: 712px;
+                margin: auto;
+            }
+
+            #gora {
+                padding-bottom: 50px;
+            }
+
+            #faq_tytul {
+                color: black;
+                width: 100%;
+                font-size: 60px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .pytanie {
+                color: black;
+                font-size: 48px;
+            }
+
+            #kontakt_tytul {
+                color: black;
+                width: 100%;
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .odpowiedz {
+                color: black;
+                margin: 5px 0 35px 60px;
+                font-size: 35px;
+            }
+            
+            textarea {
+                width: -webkit-fill-available;
+                height: 500px;
+            }
+            
+            #teksty {
+                padding: 30px;
+            }
+        }
+        
+        textarea {
+            resize: none;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body id="body">
+    <div id="loading"><img src="/img/loading.gif"></div>
+    <div id="content">
+        <div id="gora">
+            <div id="logo"><img src="/img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
+            <div id="szukaj_blok">
+                <form action="szukaj.php" enctype="text/plain" method="get">
+                    <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input type="submit" id="szukaj" value="🔍">
+                </form>
+            </div>
+        </div>
+
+        <div id="tlo">
+            <div id="teksty">
+            <div id="faq_tytul">Najczęściej zadawane pytania</div>
+            <div class="pytanie">1. Jak wyszukać ksiażkę danego autora?</div>
+            <div class="odpowiedz">
+                Jeśli chcesz wyszukać ksiązkę, należy:<br />
+                <ul>
+                    <li>najechać kursorem na pole "Szukaj w bibliotece..."</li>
+                    <li>następnie wpisać imię lub/i nazwisko autora albo tytuł książki</li>
+                </ul>
+            </div>
+
+            <div class="pytanie">2. Co oznacza zakładka "Zapowiedzi"?</div>
+            <div class="odpowiedz">
+                W tej zakładce znajdują się książki, które w przeciągu 400 lat będą dostępne na naszej stronie.
+            </div>
+
+            <div class="pytanie">3. Jak wypożyczyć książkę?</div>
+            <div class="odpowiedz">
+                Aby wypożyczyć książkę, należy wyszukać ją w wyszukiwarce. Obok wyszukania kliknij przycisk "Wypożycz". Na następnej stronie wypełnij
+                formularz, zaakceptuj przetwarzanie danych oraz kliknij "Wypożycz".
+            </div>
+
+            <div class="pytanie">4. Jak anulować wypożyczenie?</div>
+            <div class="odpowiedz">
+                Oddanie książki do szkolnej biblioteki jest równoznaczne z anulowaniem wypożyczenia. Jedynie administrator strony może anulować wypożyczenie.
+            </div>
+
+            <div class="pytanie">5. Jak się skontaktować się z nami się?</div>
+            <div class="odpowiedz">
+                Za pomocą poniższego działu...
+            </div>
+
+            <hr>
+
+            <div id="kontakt_tytul">Kontakt</div>
+
+            <div id="form">
+                <form action="mailto:webmaster@szkolnabibliotekacyfrowa.pl" method="get" enctype="text/plain">
+                    <div>
+                        <p>Imię i nazwisko: <input type="text" name="imieinazwisko"></p>
+                        <p>E-mail: <input type="text" name="email"></p>
+
+                        <p>Wiadomość:<br /> <textarea type="text"
+                            name="imie"></textarea><br /></p>
+
+                        <div id="przyciski">
+                            <input type="submit" value="Wyślij">
+                            <input type="reset" value="Wyczyść">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+
+            <div id="footer">
+                <div class="footer_zdjecierazem">
+                    <a href="https://github.com/Szkolna-Biblioteka-Cyfrowa" target="_blank">
+                        <img src="/img/github.png" class="footer_zdjecie" title="Github" />
+                        <span class="footer_zdjecietekst">Github</span>
+                    </a>
+                </div>
+                <div id="footer_razem">
+                    <span id="footer_tytul">SZKOLNA BIBLIOTEKA CYFROWA</span>
+                    <span id="footer_tekst">
+                        <a href="https://github.com/MARKUSA19" target="_blank">M. Kusaj</a> |
+                        <a href="https://github.com/Pietrox123" target="_blank">P. Kacprzycki</a> |
+                        <a href="https://github.com/D3De200" target="_blank">D. Dąbrowski</a>
+                    </span>
+                </div>
+                <div class="footer_zdjecierazem">
+                    <a href="/">
+                        <span class="footer_zdjecietekst">Strona główna</span>
+                        <img src="/img/sbc_slogo.png" class="footer_zdjecie" title="Strona główna" />
+                    </a>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

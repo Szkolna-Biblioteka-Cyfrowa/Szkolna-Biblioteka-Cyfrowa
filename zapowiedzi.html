@@ -1,0 +1,205 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	</meta>
+
+	<title>Zapowiedzi | Szkolna Biblioteka Cyfrowa</title>
+	<meta name="viewport" content="user-scalable=no">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<meta name='description' content='Zapowiedzi | Szkolna Biblioteka Cyfrowa'>
+	<meta property='og:description' content='Zapowiedzi | Szkolna Biblioteka Cyfrowa'>
+	<meta property='twitter:description' content='Wyniki wyszukania dla: '>
+
+	<meta name="title" content="Szkolna Biblioteka Cyfrowa">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://metatags.io/">
+	<meta property="og:title" content="Szkolna Biblioteka Cyfrowa">
+	<meta property="og:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://metatags.io/">
+	<meta property="twitter:title" content="Szkolna Biblioteka Cyfrowa">
+	<meta property="twitter:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+	<link rel="stylesheet" href="/css/szukaj.css">
+	<link rel="stylesheet" href="/css/stronaglowna.css">
+
+	<style>
+		@media (min-device-width: 768px) {
+
+			.miniaturka {
+				float: left;
+				margin-right: 8px;
+				height: auto;
+			}
+
+			.tytul {
+				font-weight: bold;
+				font-size: 27px;
+			}
+
+			.autor {
+				font-size: 14px;
+				font-style: italic;
+				color: rgb(210, 210, 210);
+			}
+
+			.opis {
+				font-size: 20px;
+				color: black;
+			}
+
+		}
+
+		@media (max-device-width: 768px) {
+
+			.miniaturka {
+				display: none;
+				margin-right: 8px;
+			}
+
+			.tytul {
+				font-weight: bold;
+				font-size: 45px;
+			}
+
+			.autor {
+				font-size: 36px;
+				font-style: italic;
+				color: rgb(210, 210, 210);
+			}
+
+			.opis {
+				font-size: 40px;
+				color: black;
+			}
+
+		}
+
+		.wyszukanie {
+			display: inline-block;
+			height: auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		#brakw {
+			display: flex;
+			justify-content: center;
+			margin: auto;
+		}
+
+		#tlo {
+			background-color: white;
+			border-radius: 10px;
+			padding: 10px 10px 10px 10px;
+		}
+
+		hr:last-child {
+			margin-bottom: 0px;
+			border: 0px;
+		}
+
+		.tytul {
+			color: black;
+		}
+
+		#zapowiedzi {
+			color: black;
+			width: 100%;
+			text-align: center;
+			font-size: 48px;
+			font-weight: 700;
+			margin-bottom: 50px;
+		}
+	</style>
+
+	<script src="/js/blurowanie.js"></script>
+	<script>
+		function logo() {
+			window.location.href = '/';
+		}
+	</script>
+</head>
+
+<body id="body" style="color:white;">
+	<div id="loading"><img src="/img/loading.gif"></div>
+	<div id="content">
+		<div id="gora">
+			<div id="logo"><img src="/img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
+			<div id="szukaj_blok">
+				<form action="szukaj.php" enctype="text/plain" method="get">
+					<input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input
+						type="submit" id="szukaj" value="🔍">
+				</form>
+			</div>
+		</div>
+
+		<div id="tlo">
+			<div id="zapowiedzi">
+				Wkrótce na Szkolnej Bibliotece Cyfrowej...
+			</div>
+			<div class="wyszukanie"><img src="/img/harrypotter.png" class="miniaturka"><span class="tytul">Harry Potter i
+					Kamień Filozoficzny</span><span class="autor"> J. K. Rowling</span>
+				<br><span class="opis">Książka „Harry Potter i Kamień Filozoficzny” rozpoczyna cykl o młodym czarodzieju
+					i jego licznych przygodach. Tytułowy Harry Potter wychowywany jest przez nieprzychylnych mu ciotkę i
+					wuja. Jego rodzice zginęli w tajemniczych okolicznościach, a jedyne, co mu po nich pozostało to
+					blizna na czole w kształcie błyskawicy. W dniu swoich 11. urodzin bohater dowiaduje się, że istnieje
+					świat, o którym nie miał pojęcia.</span>
+			</div>
+			<hr>
+
+			<div class="wyszukanie"><img src="/img/wladcapierscieni.png" class="miniaturka"><span class="tytul">Władca
+					Pierścieni. Bractwo Pierścienia</span><span class="autor"> J. R. R. Tolkien</span>
+				<br><span class="opis">W spokojnej wiosce w Shire młody hobbit Frodo zostaje obarczony niezwykle
+					odpowiedzialnym zadaniem. Ma on podjąć niebezpieczną podróż przez Środziemie do Szczelin Zagłady, by
+					tam zniszczyć Pierścień Jedyny. Musi bowiem udaremnić niecne plany Władcy Ciemności…</span>
+			</div>
+			<hr>
+
+			<div class="wyszukanie"><img src="/img/hobbit.jpg" class="miniaturka"><span class="tytul">Hobbit, czyli tam i z
+					powrotem</span><span class="autor"> J. R. R. Tolkien</span>
+				<br><span class="opis">Zarówno "Hobbit, czyli tam i z powrotem", jak i "Władca Pierścieni" powstały pod
+					wpływem dobrze znanych autorowi legend staroangielskich, pełnych czarodziejów, smoków i przedmiotów
+					o nadprzyrodzonej mocy. Jednakże sam hobbit, istota większa od liliputa, ale mniejsza od krasnoluda,
+					jest oryginalnym pomysłem Tolkiena. Fantastyczny, przemyślany do najdrobniejszych szczegółów świat z
+					powieści także powstał w wyobraźni pisarza, a barwna fabuła kryje głębszy sens i wiele analogii do
+					współczesności.</span>
+			</div>
+			<hr>
+		</div>
+		<div id="footer">
+			<div class="footer_zdjecierazem">
+				<a href="https://github.com/Szkolna-Biblioteka-Cyfrowa" target="_blank">
+					<img src="/img/github.png" class="footer_zdjecie" title="Github" />
+					<span class="footer_zdjecietekst">Github</span>
+				</a>
+			</div>
+			<div id="footer_razem">
+				<span id="footer_tytul">SZKOLNA BIBLIOTEKA CYFROWA</span>
+				<span id="footer_tekst">
+					<a href="https://github.com/MARKUSA19" target="_blank">M. Kusaj</a> |
+					<a href="https://github.com/Pietrox123" target="_blank">P. Kacprzycki</a> |
+					<a href="https://github.com/D3De200" target="_blank">D. Dąbrowski</a>
+				</span>
+			</div>
+			<div class="footer_zdjecierazem">
+				<a href="/">
+					<span class="footer_zdjecietekst">Strona główna</span>
+					<img src="/img/sbc_slogo.png" class="footer_zdjecie" title="Strona główna" />
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

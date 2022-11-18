@@ -1,0 +1,262 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    </meta>
+    <title>O nas | Szkolna Biblioteka Cyfrowa</title>
+
+    <meta name="viewport" content="user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="title" content="Szkolna Biblioteka Cyfrowa">
+    <meta name="description" content="O nas | Szkolna Biblioteka Cyfrowa">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Szkolna Biblioteka Cyfrowa">
+    <meta property="og:description" content="O nas | Szkolna Biblioteka Cyfrowa">
+    <meta property="og:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Szkolna Biblioteka Cyfrowa">
+    <meta property="twitter:description" content="O nas | Szkolna Biblioteka Cyfrowa">
+    <meta property="twitter:image" content="https://szkolnabibliotekacyfrowa.000webhostapp.com/img/sbcmeta.png">
+
+    <link rel="stylesheet" href="/css/szukaj.css">
+    <link rel="stylesheet" href="/css/stronaglowna.css">
+
+    <script src="/js/blurowanie.js"></script>
+    <script>
+        function logo() {
+            window.location.href = '/';
+        }
+    </script>
+
+    <style>
+        #tlo {
+            border-radius: 10px;
+            padding: 10px 0 0 0;
+            background-image: url('/img/tloonas.png');
+            background-repeat: repeat;
+            background-size: 100px;
+        }
+
+        @media (min-device-width: 768px) {
+            body {
+                font-size: 20pt;
+            }
+
+            #form {
+                display: block;
+                width: 50%;
+                background-color: rgb(241, 241, 241);
+                border-color: black;
+                border-style: dashed;
+                border-width: 1px;
+                border-radius: 20px;
+                padding: 60px 0px 30px 60px;
+                margin-bottom: 30px;
+            }
+
+            #gora {
+                padding-bottom: 10px;
+            }
+
+            #faq_tytul {
+                color: black;
+                width: 100%;
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .pytanie {
+                color: black;
+                font-size: 30px;
+            }
+
+            #kontakt_tytul {
+                color: black;
+                width: 100%;
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .odpowiedz {
+                color: black;
+                margin: 5px 0 35px 35px;
+            }
+        }
+
+        @media (max-device-width: 767px) {
+            body {
+                font-size: 42pt;
+            }
+
+            input[type=text],
+            input[type=submit],
+            input[type=reset],
+            select {
+                padding: 30px;
+                font-size: 42px;
+                vertical-align: middle;
+            }
+
+            input[type="radio"] {
+                transform: scale(3);
+                margin: 0px 30px 0px 30px;
+                vertical-align: middle;
+            }
+
+            #form {
+                display: block;
+                width: 830px;
+                background-color: rgb(241, 241, 241);
+                border-color: black;
+                border-style: dashed;
+                border-radius: 20px;
+                padding: 60px 50px 20px 50px;
+                margin-bottom: 20px;
+            }
+
+            #przyciski {
+                display: block;
+                width: 712px;
+                margin: auto;
+            }
+
+            #gora {
+                padding-bottom: 50px;
+            }
+
+            #faq_tytul {
+                color: black;
+                width: 100%;
+                font-size: 60px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .pytanie {
+                color: black;
+                font-size: 48px;
+            }
+
+            #kontakt_tytul {
+                color: black;
+                width: 100%;
+                font-size: 48px;
+                font-weight: 700;
+                margin-bottom: 50px;
+            }
+
+            .odpowiedz {
+                color: black;
+                margin: 5px 0 35px 60px;
+                font-size: 35px;
+            }
+        }
+
+        .pole {
+            width: max-content;
+        }
+
+        img.ludzie   {
+            width: 361px;
+            height: 335px;
+            border-radius: 60px;
+        }
+
+        .opisa  {
+            width: max-content;
+            display: inline-grid;
+            margin-left: 200px;
+            color: white;
+            text-align: center;
+        }
+
+        .imienazwisko   {
+            font-size:48px;
+            text-decoration: underline;
+            text-decoration-color: rgb(156, 156, 156);
+        }
+
+        #nowosci	{
+			color: white;
+			width: 100%;
+			text-align: center;
+			font-size: 48px;
+			font-weight: 700;
+			margin-bottom:50px;
+		}
+    </style>
+</head>
+
+<body id="body">
+    <div id="loading"><img src="/img/loading.gif"></div>
+    <div id="content">
+        <div id="gora">
+            <div id="logo"><img src="/img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
+            <div id="szukaj_blok">
+                <form action="szukaj.php" enctype="text/plain" method="get">
+                    <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input
+                        type="submit" id="szukaj" value="🔍">
+                </form>
+            </div>
+        </div>
+
+        <div id="tlo">
+            <div id="nowosci">
+				Autorzy strony
+			</div>
+
+            <div class="opisa">
+                <img class="ludzie" src="/img/kusaj.png" />
+                
+                <span class="imienazwisko">Marcin Kusaj</span>
+                sołtys
+            </div>
+            <div class="opisa">
+                <img class="ludzie" src="/img/dede.png" />
+                
+                <span class="imienazwisko">Dominik Dąbrowski</span>
+                klaun z Koszalina
+            </div>
+            <div class="opisa">
+                <img class="ludzie" src="/img/piter.png" />
+                
+                <span class="imienazwisko">Piotr Kacprzycki</span>
+
+                wojownik
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer_zdjecierazem">
+                <a href="https://github.com/Szkolna-Biblioteka-Cyfrowa" target="_blank">
+                    <img src="/img/github.png" class="footer_zdjecie" title="Github" />
+                    <span class="footer_zdjecietekst">Github</span>
+                </a>
+            </div>
+            <div id="footer_razem">
+                <span id="footer_tytul">SZKOLNA BIBLIOTEKA CYFROWA</span>
+            </div>
+            <div class="footer_zdjecierazem">
+                <a href="/">
+                    <span class="footer_zdjecietekst">Strona główna</span>
+                    <img src="/img/sbc_slogo.png" class="footer_zdjecie" title="Strona główna" />
+                </a>
+            </div>
+        </div>
+</body>
+
+</html>

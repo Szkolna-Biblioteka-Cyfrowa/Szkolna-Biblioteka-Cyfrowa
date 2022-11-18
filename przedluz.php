@@ -1,3 +1,35 @@
+<?php
+$nazwa_uzy1 = $_GET['nazwa_uzy'];
+
+	$haslo1 = $_GET['haslo'];
+
+	$dzis = date("Y-m-d");
+	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
+
+	$login="SELECT * FROM admin";
+	if($wynik1=$con->query($login)){
+		while($haslorow=$wynik1->fetch_array()){
+			if(($haslorow[0]!=$nazwa_uzy1)||($haslorow[1]!=$haslo1))
+			{
+			    if(($nazwa_uzy1==NULL)||($haslo1==NULL))
+			    {
+			        header( "Location: login.html" );
+				    exit;
+			    }
+			    
+				header( "Location: login.html?nieprawidlowe=1" );
+				exit;
+			}
+		}
+	}
+	
+	if($_GET['k']==NULL)
+	{
+	    header( "Location: login.html" );
+		exit;
+	}
+?>
+
 <html>
 
 <head>
@@ -54,6 +86,24 @@
 			font-size: 20px;
 			color: black;
 		}
+		
+		.informacje	{
+			font-size: 25px;
+		}
+		
+		.ktowypozyczyl	{
+			font-size: 40px;
+			margin-bottom: 5px;
+		}
+		
+		#paneladmina	{
+			color: black;
+			width: 100%;
+			text-align: center;
+			font-size: 48px;
+			font-weight: 700;
+			margin-bottom:50px;
+		}
 
 		}
 
@@ -78,6 +128,24 @@
 		.opis	{
 			font-size: 40px;
 			color: black;
+		}
+		
+		.informacje	{
+			font-size: 48px;
+		}
+		
+		.ktowypozyczyl	{
+			font-size: 48px;
+			margin-bottom: 5px;
+		}
+		
+		#paneladmina	{
+			color: black;
+			width: 100%;
+			text-align: center;
+			font-size: 72px;
+			font-weight: 700;
+			margin-bottom:50px;
 		}
 
 		}
@@ -110,73 +178,133 @@
 		.calosc	{
 			display: flex;
 		}
+
+		.hr1	{
+			opacity: 0.2;
+			width: 96%;
+		}
+
+		.zalegle	{
+			text-decoration: underline;
+			text-decoration-color: #ee1708;
+			color:#ee1708;
+		}
 	</style>
+	
+	<link rel="stylesheet" href="/css/form.css">
 
     <script src="/js/blurowanie.js"></script>
 	<script>
 		function logo()	{
 			window.location.href = '/';
 		}
+		
+		window.onload = function()	{
+			var dzis = new Date().toISOString().split('T')[0];	
+
+			document.getElementsByName("d_oddania")[0].setAttribute('min', dzis);
+    	}
 	</script>
 </head>
 
-<body id="body" style="color:white;">
+<body id="body" style="color:black;">
 	<div id="loading"><img src="/img/loading.gif"></div>
     <div id="content">
     <div id="gora">
         <div id="logo"><img src="/img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
         <div id="szukaj_blok">
-            <form action="szukaj.php" enctype="text/plain" method="get">
-                <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w bibliotece..."><input type="submit"
+            <form action="panel.php" enctype="text/plain" method="get">
+                <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w wypożyczeniach..."><input type="submit"
                     id="szukaj" value="🔍">
+                <input type="hidden" name="nazwa_uzy" value="admin">
+                <input type="hidden" name="haslo" value="zaq1@WSX">
             </form>
         </div>
     </div>
 
 	<?php
-	$s = $_GET['s'];
-	$w = 0;
+	$nazwa_uzy1 = $_GET['nazwa_uzy'];
 
+	$haslo1 = $_GET['haslo'];
+
+	$dzis = date("Y-m-d");
 	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
 
-	$GG="SELECT * FROM ksiazki WHERE Tytul LIKE '%" . $s . "%' OR Autor LIKE '%" . $s . "%'";
+	$login="SELECT * FROM admin";
+	if($wynik1=$con->query($login)){
+		while($haslorow=$wynik1->fetch_array()){
+			if(($haslorow[0]!=$nazwa_uzy1)||($haslorow[1]!=$haslo1))
+			{
+				header( "Location: login.html?nieprawidlowe=1" );
+				exit;
+			}
+		}
+	}
+	
+	$k = $_GET['k'];
+
+	echo "<script>history.replaceState('x', 'x', '/przedluz')</script>";
+
+	$GG="
+		SELECT zamowienia.numer_zamowienia, ksiazki.LP, ksiazki.Tytul, ksiazki.Autor, ksiazki.Opis, zamowienia.Imie,
+		zamowienia.Nazwisko, zamowienia.LP_ksiazki, zamowienia.Klasa, zamowienia.Data_wypozyczenia,
+		zamowienia.Data_oddania FROM zamowienia
+		INNER JOIN ksiazki ON zamowienia.LP_ksiazki=ksiazki.LP WHERE zamowienia.numer_zamowienia = " . $k . ";
+	";
+
 	if($wynik2=$con->query($GG)){
 		echo "<div id='tlo'>";
 
 	while($row=$wynik2->fetch_array()){
 		echo "
-			<div class='calosc'><div class='wyszukanie'><img src='/img/" . $row[0] . ".jpg' class='miniaturka' /><a href=''><span class='tytul'>" . $row[1] . "</span></a><span class='autor'> " . $row[2] . "</span>
-			<br /><span class='opis'>" . $row[3] . "</span></div><div id='wypozycz' onclick='wypozycz" . $row[0] ."()'>
-            Wypożycz
-        </div></div><hr />
+			<div class='ktowypozyczyl'>" . $row[5] . " " . $row[6] . " z klasy " . $row[8] ." wypożyczył:</div>
 
-		<script>
-			function wypozycz" . $row[0] ."()	{
-				location.href = '/wypozycz?k=" . $row[0] ."';
+			<div class='calosc'><div class='wyszukanie'><img src='/img/" . $row[1] . ".jpg' class='miniaturka' /><span class='tytul'>" . $row[2] . "</span><span class='autor'> " . $row[3] . "</span>
+			<br /><span class='opis'>" . $row[4] . "</span>	
+			</div>
+        </div>
+		<hr class='hr1' />
+		<div class='informacje'>
+			Data wypożyczenia: " . $row[9] ."<br />";
+			
+			if($dzis<$row[10])
+			{
+				echo "Data oddania: " . $row[10] ."<br />";
 			}
-		</script>
-		";
+
+			else
+			{
+				echo "<span class='zalegle'>Data oddania: " . $row[10] ." (zaległe wypożyczenie!)</span><br />";
+			}
+
+		echo "</div>
 		
-		$w = $w + 1;
+		<hr />
+		
+		<div id='form'>
+            <form action='/przedluzsubmit.php' method='GET'>
+                <div id='form2'>
+                    <p>Data oddania:
+                        <input type='date' name='d_oddania' required>
+                    </p>
+
+                    <div id='przyciski'>
+                        <input type='submit' name='submit' value='Przedłuż'>
+                    </div>
+                </div>
+                <input type='hidden' name='lp' value='" . $k ."' />
+                <input type='hidden' name='nazwa_uzy' value='admin' />
+                <input type='hidden' name='haslo' value='zaq1@WSX' />
+            </form>
+        </div>
+        
+        <title>Przedłuż wypożyczenie ucznia " . $row[5] . " " . $row[6] . " | Szkolna Biblioteka Cyfrowa</title>
+		";
 	}
 
-	}
-
-	if ($w == 0)
-	{
-		echo "<div id='brakw'><span class='opis'>Nie znaleziono wyników dla: <span style='font-style:italic;'>" . $s . "</span></span></div>";
 	}
 
 	echo "</div>";
-
-	if ($s == null)
-		echo "<title>Wyszukiwarka | Szkolna Biblioteka Cyfrowa</title>";
-	else
-		echo "<title>Wyszukiwarka: " . $s . " | Szkolna Biblioteka Cyfrowa</title>";
-
-		echo "<meta name='description' content='Wyniki wyszukania dla: " . $s . "'>";
-		echo "<meta property='og:description' content='Wyniki wyszukania dla: " . $s . "'>";
-		echo "<meta property='twitter:description' content='Wyniki wyszukania dla: " . $s . "'>";
 	?>
 	<div id="footer">
         <div class="footer_zdjecierazem">

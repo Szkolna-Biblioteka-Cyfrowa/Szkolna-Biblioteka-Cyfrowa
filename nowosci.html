@@ -12,6 +12,11 @@
     <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+    
+    <title>Nowości | Szkolna Biblioteka Cyfrowa</title>
+    <meta name='description' content='Nowości | Szkolna Biblioteka Cyfrowa'>
+    <meta property='og:description' content='Nowości | Szkolna Biblioteka Cyfrowa'>
+    <meta property='twitter:description' content='Nowości | Szkolna Biblioteka Cyfrowa'>
 
     <meta name="title" content="Szkolna Biblioteka Cyfrowa">
 
@@ -87,7 +92,6 @@
 			height: auto;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			width: -webkit-fill-available;
 		}
 
 		#brakw	{
@@ -97,7 +101,7 @@
 		}
 
 		#tlo	{
-			background-color: rgb(255,255,255);
+			background-color: white;
 			border-radius: 10px;
 			padding: 10px 10px 10px 10px;
 		}
@@ -106,9 +110,18 @@
 			margin-bottom: 0px;
 			border: 0px;
 		}
+		
+		.tytul	{
+			color: black;
+		}
 
-		.calosc	{
-			display: flex;
+		#nowosci	{
+			color: black;
+			width: 100%;
+			text-align: center;
+			font-size: 48px;
+			font-weight: 700;
+			margin-bottom:50px;
 		}
 	</style>
 
@@ -121,7 +134,7 @@
 </head>
 
 <body id="body" style="color:white;">
-	<div id="loading"><img src="/img/loading.gif"></div>
+    <div id="loading"><img src="/img/loading.gif"></div>
     <div id="content">
     <div id="gora">
         <div id="logo"><img src="/img/sbc_logo.png" id="logoId" class="logo" onclick="logo()" /></div>
@@ -133,52 +146,19 @@
         </div>
     </div>
 
-	<?php
-	$s = $_GET['s'];
-	$w = 0;
-
-	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
-
-	$GG="SELECT * FROM ksiazki WHERE Tytul LIKE '%" . $s . "%' OR Autor LIKE '%" . $s . "%'";
-	if($wynik2=$con->query($GG)){
-		echo "<div id='tlo'>";
-
-	while($row=$wynik2->fetch_array()){
-		echo "
-			<div class='calosc'><div class='wyszukanie'><img src='/img/" . $row[0] . ".jpg' class='miniaturka' /><a href=''><span class='tytul'>" . $row[1] . "</span></a><span class='autor'> " . $row[2] . "</span>
-			<br /><span class='opis'>" . $row[3] . "</span></div><div id='wypozycz' onclick='wypozycz" . $row[0] ."()'>
-            Wypożycz
-        </div></div><hr />
-
-		<script>
-			function wypozycz" . $row[0] ."()	{
-				location.href = '/wypozycz?k=" . $row[0] ."';
-			}
-		</script>
-		";
+	<div id='tlo'>
+	    <div id="nowosci">
+				Nowości
+			</div>
+			<div class='wyszukanie'><img src='/img/1.jpg' class='miniaturka' /><a href=''><span class='tytul'>Pan Tadeusz</span></a><span class='autor'> Adam Mickiewicz</span>
+			<br /><span class='opis'>Pan Tadeusz, czyli ostatni zajazd na Litwie – poemat epicki Adama Mickiewicza wydany w dwóch tomach w 1834 w Paryżu przez Aleksandra Jełowickiego. Ta epopeja narodowa powstała w latach 1832–1834 w Paryżu. Składa się z dwunastu ksiąg pisanych wierszem, trzynastozgłoskowym aleksandrynem polskim.</span></div><hr />
 		
-		$w = $w + 1;
-	}
-
-	}
-
-	if ($w == 0)
-	{
-		echo "<div id='brakw'><span class='opis'>Nie znaleziono wyników dla: <span style='font-style:italic;'>" . $s . "</span></span></div>";
-	}
-
-	echo "</div>";
-
-	if ($s == null)
-		echo "<title>Wyszukiwarka | Szkolna Biblioteka Cyfrowa</title>";
-	else
-		echo "<title>Wyszukiwarka: " . $s . " | Szkolna Biblioteka Cyfrowa</title>";
-
-		echo "<meta name='description' content='Wyniki wyszukania dla: " . $s . "'>";
-		echo "<meta property='og:description' content='Wyniki wyszukania dla: " . $s . "'>";
-		echo "<meta property='twitter:description' content='Wyniki wyszukania dla: " . $s . "'>";
-	?>
-	<div id="footer">
+			<div class='wyszukanie'><img src='/img/2.jpg' class='miniaturka' /><a href=''><span class='tytul'>Chłopi</span></a><span class='autor'> Władysław Reymont</span>
+			<br /><span class='opis'>Chłopi – powieść społeczno-obyczajowa Władysława Stanisława Reymonta publikowana w odcinkach w latach 1902–1908 w „Tygodniku Ilustrowanym”, wydana w latach 1904–1909 w Warszawie w wydawnictwie „Gebethner i Wolff”. Pisarz otrzymał za ten utwór literacką Nagrodę Nobla w 1924.</span></div><hr />
+		
+			<div class='wyszukanie'><img src='/img/3.jpg' class='miniaturka' /><a href=''><span class='tytul'>Mały Książę</span></a><span class='autor'> Antoine Saint-Exupéry</span>
+			<br /><span class='opis'>Mały Książę – powiastka filozoficzna autorstwa Antoine’a de Saint-Exupéry’ego, wydana w 1943 w Nowym Jorku w wydawnictwie „Reynal & Hitchcock”; przetłumaczona na ponad 300 języków bądź dialektów, sprzedana w ponad 140 milionach egzemplarzy, należy do klasyki światowej literatury.</span></div><hr />
+		</div>	<div id="footer">
         <div class="footer_zdjecierazem">
             <a href="https://github.com/Szkolna-Biblioteka-Cyfrowa" target="_blank">
                 <img src="/img/github.png" class="footer_zdjecie" title="Github" />
