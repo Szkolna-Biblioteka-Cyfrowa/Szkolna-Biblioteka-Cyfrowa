@@ -4,7 +4,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
 	$haslo1 = $_GET['haslo'];
 
 	$dzis = date("Y-m-d");
-	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
+	$con = new mysqli("localhost","root","","baza");
 
 	$login="SELECT * FROM admin";
 	if($wynik1=$con->query($login)){
@@ -228,7 +228,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
 	$haslo1 = $_GET['haslo'];
 
 	$dzis = date("Y-m-d");
-	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
+	$con = new mysqli("localhost","root","","baza");
 
 	$login="SELECT * FROM admin";
 	if($wynik1=$con->query($login)){
@@ -294,7 +294,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
                 </div>
                 <input type='hidden' name='lp' value='" . $k ."' />
                 <input type='hidden' name='nazwa_uzy' value='admin' />
-                <input type='hidden' name='haslo' value='zaq1@WSX' />
+                <input type='hidden' name='haslo' value='' />
             </form>
         </div>
         
