@@ -4,7 +4,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
 	$haslo1 = $_GET['haslo'];
 
 	$dzis = date("Y-m-d");
-	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
+	$con = new mysqli("localhost","root","","baza");
 
 	$login="SELECT * FROM admin";
 	if($wynik1=$con->query($login)){
@@ -30,7 +30,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
 
         $q = "UPDATE zamowienia SET Data_oddania = '" . $D_oddania . "' WHERE numer_zamowienia = ". $LP;
         $r = mysqli_query($con, $q);
-        header( "Location: panel.php?nazwa_uzy=admin&haslo=zaq1%40WSX&success=1" ); 
+        header( "Location: panel.php?nazwa_uzy=admin&haslo=&success=1" ); 
         exit;
     }
 ?>
