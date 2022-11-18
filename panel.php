@@ -4,7 +4,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
 	$haslo1 = $_GET['haslo'];
 
 	$dzis = date("Y-m-d");
-	$con = new mysqli("localhost","id19715355_root","E1Nc&M@>I=@?Sw]~","id19715355_baza");
+	$con = new mysqli("localhost","root","","baza");
 
 	$login="SELECT * FROM admin";
 	if($wynik1=$con->query($login)){
@@ -29,7 +29,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
         	
         $r = mysqli_query($con, $q);
 
-        header( "Location: panel.php?nazwa_uzy=admin&haslo=zaq1%40WSX&success=0" );
+        header( "Location: panel.php?nazwa_uzy=admin&haslo=&success=0" );
         
         exit;
     }
@@ -241,7 +241,7 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
                 <input type="text" name="s" id="wyszukiwarka" placeholder="Szukaj w wypożyczeniach..."><input type="submit"
                     id="szukaj" value="🔍">
                 <input type="hidden" name="nazwa_uzy" value="admin">
-                <input type="hidden" name="haslo" value="zaq1@WSX">
+                <input type="hidden" name="haslo" value="">
             </form>
         </div>
     </div>
@@ -300,11 +300,11 @@ $nazwa_uzy1 = $_GET['nazwa_uzy'];
 				if(
 				(confirm('Czy chcesz anulować wypożyczenie ucznia " . $row[5] . " " . $row[6] . "?')
 				)==true)
-				location.href = '/panel?k=" . $row[0] ."&nazwa_uzy=admin&haslo=zaq1%40WSX';
+				location.href = '/panel?k=" . $row[0] ."&nazwa_uzy=admin&haslo=';
 			}
 			
 			function przedluz" . $row[0] ."()	{
-				location.href = '/przedluz?k=" . $row[0] ."&nazwa_uzy=admin&haslo=zaq1%40WSX';
+				location.href = '/przedluz?k=" . $row[0] ."&nazwa_uzy=admin&haslo=';
 			}
 		</script>
         
